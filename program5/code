@@ -1,0 +1,14 @@
+
+create database company;
+use company;
+create table employ (id integer(5) primary key,name varchar(20),salary integer(6),department varchar(20) not null,dob date);
+ insert into employ (id,name,salary,department,dob) values
+    ( 1,'Arjun',3000,'HR','1/05/1993'),
+    (2,' Sajin',36000,'sales','1999-01-01'),
+    (3,' Nima',36000,'sales','2002-02-20'),
+    (4,' Jhon',36000,'production','2003-10-20'),
+    (5,' Joyal',56000,'production','2000-01-01');
+select department,count(*) from employe group by department;
+select department,count(id) as total_employ from employee group by department having count(id) > 1 order by count(id) ;
+select sum(salary),count(name) from employ group by department having sum(salary)>5000 and count(name)!=1;
+select sum(salary) from employ group by department having sum(salary) between 2000 and 6000 and department is not null;;
