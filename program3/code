@@ -1,0 +1,10 @@
+create table employe(id varchar(5) primary key,name varchar(20) not null,address varchar(30),salary integer(10),department varchar(20));
+ insert into employe values(1,'lima','calict',20000,'sales'),(2,'nima','banglore',30000,'production'),(3,'nimi','Mumbai',25000,'Research'),(4,'sajin','malappuram',55000,'sales'),(5,'Arjun','kochi',40000,'Research'),(6,'Hima','kochi',15000,'Finance'),(7,'Mohan','Thrissur',25000,'production'),(8,'milan','Kottayam',33000,'Research'),(9,'Jhon','Kannur',20000,'Research'),(10,'Leena','malappuram',38000,'Finance');
+select * from employe;
+select * from employe where salary>25000;
+select name from employe where name like 'A%';
+alter table employe add location varchar(30);
+update employe set location='Dubai';
+delete from employe where name='Arjun';
+select max(salary),min(salary) from employe;
+ select * from employe order by name desc;
