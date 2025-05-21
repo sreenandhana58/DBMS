@@ -1,0 +1,8 @@
+create table employee(id varchar(10) primary key,name varchar(20) not null,salary integer(10),dept varchar(25));
+ insert into employee values ( 1,'Arjun',30000,'HR'), (2,' Sajin',36000,'sales'),(3,' Nima',36000,'sales'),(4,' Jhon',36000,'production'),(5,' Joyal',56000,'production');
+create table manager(id varchar(10) primary key,name varchar(20) not null,salary integer(10),dept varchar(25));
+ insert into manager values ( 1,'Arjun',30000,'HR'), ( 2,'Arun',37000,'finance'), ( 3,'Varun',67000,'production');
+ select * from employee;
+ select * from employee;
+ select * from employee except select * from manager;
+ select * from employee intersect select * from manager;
