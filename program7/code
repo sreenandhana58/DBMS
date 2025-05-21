@@ -1,0 +1,34 @@
+CREATE TABLE countries (country_code varchar(2) PRIMARY KEY,country_name VARCHAR(100));
+
+CREATE TABLE capital (
+    capital_id INTEGER(5) PRIMARY KEY,
+    country_code CHAR(2),
+    capital_name VARCHAR(100),
+    FOREIGN KEY (country_code) REFERENCES countries(country_code)
+);
+
+
+INSERT INTO countries (country_code, country_name) VALUES
+('IN', 'India'),
+('SL', 'Sri Lanka'),
+('PK', 'Pakistan'),
+('BN', 'Bangladesh'),
+('NP', 'Nepal');
+
+INSERT INTO capital (capital_id, country_code, capital_name) VALUES
+(1, 'IN', 'Delhi'),
+(2, 'PK', 'Islamabad'),
+(3, 'NP', 'Kathmandu');
+
+
+select * from countries;
+
+select * from capital;
+
+SELECT * FROM countries inner JOIN capital ON countries.country_code = capital.country_code;
+
+SELECT * FROM countries left JOIN capital ON countries.country_code = capital.country_code;
+
+SELECT * FROM countries right JOIN capital ON countries.country_code = capital.country_code;
+
+SELECT * FROM countries left JOIN capital ON countries.country_code = capital.country_code union SELECT * FROM countries right JOIN capital ON countries.country_code = capital.country_code;
