@@ -1,0 +1,9 @@
+declare
+n int:=&n;
+begin
+if MOD(n,2)=0 THEN
+DBMS_OUTPUT.PUT_LINE(n||' is EVEN NUMBER ');
+else
+DBMS_OUTPUT.PUT_LINE(n||' IS odd number');
+end if;
+end;
